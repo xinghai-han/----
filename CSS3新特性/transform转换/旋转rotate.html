@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>只因你太美</title>
+  <style>
+    img {
+       margin: 0 auto;
+       width: 500px;
+       border-radius: 50%;
+       border: 5px solid pink;
+       transition: all 0.3s;
+    }
+
+    img:hover {
+      transform: rotate(360deg);
+    }
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px auto;
+      transition: all 1s;
+      /* 以左下角为旋转中心点（默认盒子中心） */
+      transform-origin: left bottom;  
+    }
+    div:hover {
+      transform: rotate(360deg);
+    }
+  </style>
+</head>
+<body>
+  <img src="../../只因测试图.png" alt="">
+  <div></div>
+</body>
+</html>

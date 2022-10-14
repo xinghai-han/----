@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三角巧用</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .price {
+      /* 用怪异盒子消除边框和子元素间缝隙 */
+      box-sizing:border-box;
+      width: 160px;
+      height: 24px;
+      border: 1px solid red;
+      margin: 100px auto;
+    }
+    .miaosha {
+      position: relative;
+      float: left;
+      width: 90px;
+      height: 100%;
+      background: red;
+      text-align: center;
+      color:#fff;
+      margin-right: 4px;
+    }
+    .miaosha i {
+      position: absolute;
+      top:0;
+      right:0;
+      width: 0;
+      height: 0;
+      line-height: 0;
+      font-size: 0;
+      border-color: transparent #fff transparent transparent;
+      border-style: solid;
+      /* 使用怪异盒子后，边框会向内占位，盒子整体大小不会改变，所以三角样式要考虑边框1px，高度要设置位24-2=22px */
+      border-width: 22px 10px 0 0;
+    }
+    .yuanjia {
+      color:gray;
+      /* 删除线 */
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+ 
+   <div class="price">
+      <span class="miaosha">
+        ￥1650
+        <i></i>
+      </span>
+      <span class="yuanjia">￥5650</span>
+   </div>
+</body>
+</html>

@@ -1,0 +1,351 @@
+body {
+  max-width: 540px;
+  min-width: 320px;
+  margin: 0 auto;
+  font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+  color: #000;
+  background: #f2f2f2;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+div {
+  /* 给定css3盒子模型 */
+  box-sizing: border-box;
+}
+
+/* 搜索模块 */
+.search-index {
+  display: flex;   /*盒子内flex布局 */
+  position: fixed;  /* 固定定位只以屏幕为准,和父盒子位置无关 */
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%); 
+  transform: translateX(-50%);   /*向左移动盒子自身宽度一半以达到盒子整体水平居中 */
+  width: 100%;  /* 固定定位的盒子需要给定宽度 */
+  min-width: 320px;
+  max-width: 640px;
+  height: 44px;
+}
+
+.search {
+  position: relative;
+  flex: 1;
+  height: 26px;
+  line-height: 24px;   /*要减去上下边框1px的边距*/
+  padding-left: 25px;
+  border: 1px solid #ccc;
+  margin: 7px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: 12px;
+  color: #666;
+  background-color: #f6f6f6;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.search::before {
+  content:"";
+  position: absolute;
+  top: 5px;
+  left: 5px; 
+  width: 15px;
+  height: 15px;
+  background: url(../images/sprite.png) no-repeat -59px -279px;
+  background-size: 104px auto;
+}
+
+.user {
+  width: 44px;
+  height: 44px;
+  font-size:12px;
+  text-align: center;
+  color: #2eaee0;
+}
+
+.user::before {
+  content:"";
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../images/sprite.png) no-repeat -59px -194px;
+  background-size: 104px auto;
+  margin: 5px auto 0;
+}
+
+/* 焦点图 */
+.focus {
+  /* 因为搜索框用固定定位不占标准流位置,盖住了焦点图,需要padding内边距往下移 */
+  padding-top: 44px; 
+}
+
+.focus img {
+  width: 100%;
+}
+
+/* 局部导航 */
+.local-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 64px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 3px 4px;
+}
+
+.local-nav li {
+  flex: 1;
+}
+
+.local-nav a {
+  display: flex;
+  flex-direction: column;
+  /* 侧轴(x轴)居中对齐(单行),实现水平居中 */
+  align-items: center;
+  font-size: 12px;
+}
+
+.local-nav-icon {
+  width: 32px;
+  height: 32px;
+  margin-top: 8px;
+  background: url(../images/localnav_bg.png) no-repeat 0 0;
+  background-size: 32px auto;
+}
+
+.local-nav li:nth-child(2) .local-nav-icon {
+  background-position: 0 -32px;    /* 精灵图背景重定位 */
+}
+
+.local-nav li:nth-child(3) .local-nav-icon {
+  background-position: 0 -64px;
+}
+
+.local-nav li:nth-child(4) .local-nav-icon {
+  background-position: 0 -96px;
+}
+
+.local-nav li:nth-child(5) .local-nav-icon {
+  background-position: 0 -128px;
+}
+
+/* 大导航*/
+nav {
+  border-radius: 8px;
+  margin: 0 4px 3px;
+  overflow: hidden;
+}
+
+.nav-common {
+  display: flex;
+  height: 88px;
+  background: -webkit-linear-gradient(left,#FF6699,#FF9999);
+}
+
+
+.nav-common:nth-child(2) {
+    margin: 3px 0;
+    background: -webkit-linear-gradient(left,#009966,#00CC66);
+}
+
+.nav-common:nth-child(2) .nav-items:nth-child(1) a {
+  background: url(../images/vacation.png) no-repeat bottom center;
+  background-size: 63px auto;
+}
+
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left,#6699FF,#66CCFF);
+}
+
+.nav-common:nth-child(3) .nav-items:nth-child(1) a {
+  background: url(../images/flight.png) no-repeat bottom center;
+  background-size: 63px auto;
+}
+
+.nav-items {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+}
+
+.nav-items a {
+  flex: 1;
+  /* 让a的文字居中对齐 */
+  text-align: center;
+  line-height: 44px; 
+  color: #fff;
+  font-size: 14px;
+  text-shadow: 1px 1px rgba(0,0,0,0.2);
+}
+
+.nav-items:nth-child(n+2) a:first-child {
+   border-bottom: 1px solid #fff;
+}
+
+.nav-items:nth-child(1) a {
+  /* border: 0; */
+  background: url(../images/hotel.png) no-repeat bottom center;
+  background-size: 121px auto;
+}
+
+
+
+.nav-items:nth-child(-n+2) {
+   /* 选出前两个盒子 */
+   border-right:  1px solid #fff;    /*flex布局的盒子是css3盒子模型,不会因为加边框撑大盒子*/
+}
+
+/* 侧导航 */
+.subnav-entry {
+  display: flex;
+  /* 设置自动换行 */
+  flex-wrap: wrap;  
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 0 4px;
+  padding: 5px 0;
+}
+
+.subnav-entry li {
+  /* 设置一行只能排五个,flex百分比相对于父级盒子 */
+  flex: 20%;
+}
+
+.subnav-entry li a {
+  display: flex;
+  flex-direction: column;
+  /* 侧轴(x轴)居中对齐(单行),实现水平居中 */
+  align-items: center;
+  font-size: 12px;
+}
+
+.subnav-entry li [class^="subnav-entry-icon"] {
+  width: 28px;
+  height: 28px;
+  margin-top: 4px;
+  background: url(../images/subnav-bg.png) no-repeat 0 0;
+  background-size: 28px auto;
+}
+
+.subnav-entry li .subnav-entry-icon2 {
+  background-position: 0 -30px;
+}
+.subnav-entry li .subnav-entry-icon3 {
+  background-position: 0 -64px;
+}
+.subnav-entry li .subnav-entry-icon4 {
+  background-position: 0 -100px;
+}
+.subnav-entry li .subnav-entry-icon5 {
+  background-position: 0 -132px;
+}
+.subnav-entry li .subnav-entry-icon6 {
+  background-position: 0 -164px;
+}
+.subnav-entry li .subnav-entry-icon7 {
+  background-position: 0 -196px;
+}
+.subnav-entry li .subnav-entry-icon8 {
+  background-position: 0 -228px;
+}
+.subnav-entry li .subnav-entry-icon8 {
+  background-position: 0 -258px;
+}
+.subnav-entry li .subnav-entry-icon9 {
+  background-position: 0 -320px;
+}
+.subnav-entry li .subnav-entry-icon10 {
+  background-position: 3px -288px;
+}
+
+
+/* 活动 */
+.sales-box {
+   border-top: 1px solid #bbb;
+   background-color: #fff;
+   margin:4px;
+}
+
+.sales-hd {
+  position: relative;
+  height: 44px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sales-hd h2 {
+  position: relative;
+  font-size: 0;
+  /* text-indent: -999px;
+  overflow: hidden; */
+}
+
+.sales-hd h2::after {
+  position: absolute;
+  content:"";
+  top: 15px;
+  left: 10px;
+  width: 79px;
+  height: 15px;
+  background: url(../images/hot.png) no-repeat 0 -20px;
+  background-size: 79px auto;
+}
+
+.sales-hd .more{
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  color:#fff;
+  padding: 3px 20px 3px 10px;
+  background:-webkit-linear-gradient(left,#FF506C,#FF6BC6);
+  border-radius: 15px;
+}
+
+.more::after {
+  content:"";
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+}
+
+/* .sales-bd {
+   
+} */
+
+.row {
+  display: flex;
+}
+
+.row a {
+  flex:1;
+  border-bottom: 1px solid #eee;
+}
+
+.row a:first-child {
+  border-right: 1px solid #eee;
+}
+
+.row a img {
+  width: 100%;
+}

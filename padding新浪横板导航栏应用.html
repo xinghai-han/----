@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .nav {
+         height: 41px;
+         border-top: 3px solid #ff8500;
+         border-bottom: 1px solid #edeef0;
+         background-color: #fff;
+         line-height: 41px;
+      }
+      .nav a {
+        /*给a设置高度前先将a转换为行内块元素*/
+        display: inline-block;
+        height: 41px;
+        padding: 0 20px;
+        text-decoration: none;
+        font-size: 12px;
+        color: #4c4c4c;
+      }
+      .nav a:hover {
+         background-color: #eee;
+         color:#ff8500;
+      }
+  </style>
+</head>
+<body>
+     <!-- 通过padding设置内边距，可以灵活调整导航栏的导航项宽度，不必定死 -->
+     <div class="nav">
+            <a href="#">新浪导航</a>
+            <a href="#">手机新浪网</a>
+            <a href="#">移动客户端</a>
+            <a href="#">微博</a>
+            <a href="#">新浪库</a>
+     </div>
+</body>
+</html>

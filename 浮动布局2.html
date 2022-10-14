@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浮动元素搭配标准流父级盒子</title>
+  <style>
+    * {
+      /* 清除标签默认边距*/
+      margin: 0;
+      padding: 0;
+    }
+    li {
+       /* 清除自带圆点 */
+      list-style: none;
+    }
+    .box {
+      width: 1226px;
+      height: 285px;
+      background-color: aqua;
+      margin: 0 auto;
+    }
+    .box li {
+       width: 296px;
+       height: 285px;
+       background-color: pink;
+       float: left;
+       margin-right: 14px;
+    }
+    .box .last {  
+      /* 注意选择器权重 */
+       margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+    <ul class="box">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li class="last">4</li>
+    </ul>
+</body>
+</html>

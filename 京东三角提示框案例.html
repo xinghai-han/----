@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三角应用</title>
+  <style>
+    .jd {
+      position: relative;
+      width: 120px;
+      height: 249px;
+      background-color: #00aeec;
+      margin: 100px auto;
+    }
+    .jd span {
+      position: absolute;
+      left: 55px;
+      top:-10px;
+      width: 0;
+      height: 0;
+      /* 兼容性 */
+      line-height: 0;
+      font-size: 0;
+      border: 5px solid transparent ;
+      border-bottom-color: #00aeec;
+    }
+
+    .my {
+      margin: 50px auto;
+      position: relative;
+      width: 240px;
+      height: 120px;
+      background-color: #00aeec;
+    }
+
+    .my span {
+      position: absolute;
+      top:50px;
+      right:-20px;
+      width: 0;
+      height: 0;
+      line-height: 0;
+      font-size: 0rem;
+      border: 10px solid transparent;
+      border-left-color: #00aeec;
+    }
+  </style>
+</head>
+<body>
+    <div class="jd">
+      <span></span>
+    </div>
+    <div class="my">
+      <span></span>
+    </div>
+</body>
+</html>

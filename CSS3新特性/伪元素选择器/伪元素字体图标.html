@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪元素应用1</title>
+  <style>
+     @font-face {
+        font-family: "iconfont"; /* Project id  */
+        src: url('iconfont.ttf?t=1663819177151') format('truetype');
+      }
+
+      .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 12px;
+        font-style: normal;
+        color:#00aeec;
+        /* 抗锯齿渲染 */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    div {
+      position: relative;
+      width: 200px;
+      height: 35px;
+      border: 1px solid #00aeec;
+      margin: 100px auto;
+    }
+    div::after {
+      position: absolute;
+      right: 2px;
+      top: 9.5px;
+      content:"\e665";
+      font-family: "iconfont" !important;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="iconfont"></div>
+</body>
+</html>

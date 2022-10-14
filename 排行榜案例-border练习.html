@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table案例</title>
+  <style>
+    img{
+      width:20px;
+      height:20px;
+    }
+    table{
+      font-family: verdana,arial,sans-serif;
+      font-size:11px;
+    }
+    table th{
+      padding: 8px;
+      border: 1px solid pink;
+      background-color: #dedede;
+    }
+    table td{
+      padding: 8px;
+      background-color: #ffffff;
+      border: 1px solid pink;
+      border-collapse: collapse; /*合并相邻边框*/
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">百度小说榜</h1>
+  <table align="center" cellspacing="0">
+    <thead>
+      <tr>
+        <th>排名</th>
+        <th>小说名</th>
+        <th>趋势</th>
+        <th>热搜指数</th>
+        <th>作者</th>
+        <th>相关链接</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>万古神帝</td>
+        <td><img src="dash.png" alt=""></td>
+        <td>724400</td>
+        <td>飞天鱼</td>
+        <td><a href="https://tieba.baidu.com/f?ie=utf-8&kw=%E4%B8%87%E5%8F%A4%E7%A5%9E%E5%B8%9D&fr=search" target="_blank">贴吧</a></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>斗罗大陆</td>
+        <td><img src="down.png" alt=""></td>
+        <td>567846</td>
+        <td>唐家三少</td>
+        <td><a href="https://tieba.baidu.com/f?ie=utf-8&kw=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&fr=search">贴吧</a></td>
+      <tr>
+        <td>3</td>
+        <td>深空彼岸</td>
+        <td><img src="up.png" alt=""></td>
+        <td>362762</td>
+        <td>辰东</td>
+        <td><a href="https://tieba.baidu.com/f?ie=utf-8&kw=%E6%B7%B1%E7%A9%BA%E5%BD%BC%E5%B2%B8&fr=search">贴吧</a></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

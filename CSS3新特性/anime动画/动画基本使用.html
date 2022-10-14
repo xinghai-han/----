@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 动画：盒子从左走到右 */
+     @keyframes move {
+        /* start */
+        0% {
+          transform: translate(0,0);
+        }
+        25% {
+          transform: translate(1000px,0);
+        }
+        50% {
+          transform: translate(1000px,500px);
+        }
+        75% {
+          transform: translate(0,500px);
+        }
+        /* end */
+        100% {
+          transform: translate(0,0);
+        }
+     }
+     div {
+       width: 200px;
+       height: 200px;
+       /* margin: 100px auto; */
+       background-color: pink;
+       animation-name: move;
+       animation-duration: 10s;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+     }
+     div:hover {
+       /* 鼠标经过暂停播放 */
+       animation-play-state: paused;
+     }
+  </style>
+</head>
+<body>
+    <div>我是动画盒子</div>
+</body>
+</html>

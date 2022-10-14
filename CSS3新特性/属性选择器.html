@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     input {
+      /* 去除焦点边框 */
+      outline:none;
+     }
+     input[type] {
+        border-color: blue;
+     }
+     input[type="text"] {
+        color:pink;
+     }
+     input[type="button"]:hover {
+       cursor:pointer;
+     }
+     input[type^="button"] { 
+       background-color: blue;
+       color:#fff;
+     }
+     
+  </style>
+</head>
+<body>
+  <input type="text" value="我是一个普通框">
+  <input type="password" placeholder="我是一个密码框">
+  <input type="button" value="按钮框">
+   <input type="file" name="" id="" >
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      ul li{
+        color: greenyellow;
+         /* 复合选择器: 元素+元素  权重0,0,0,2 */
+      }
+      li{
+        color: red;   
+        /* 元素选择器权重 0,0,0,1 */
+      }
+      .nav li{
+         color:black;
+         /* 复合选择器:  类 + 元素 权重 0,0,1,1 */
+      }
+
+      /* 目标:第一个li颜色变粉色 */
+      .nav .l1{
+           /* 直接.l1权重是10,.nav li 权重是11,要想权重比它高得两个类选择器 权重20 */
+           color:pink;
+      }
+  </style>
+</head>
+<body>
+    <ul class="nav">
+      <li class="l1">蒸羊羔</li>
+      <li>蒸熊掌</li>
+      <li>蒸鹿尾</li>
+    </ul>
+</body>
+</html>

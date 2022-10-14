@@ -1,0 +1,356 @@
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 清除浮动 */
+  .clearfix:before,.clearfix:after {
+    content:"";
+    display: table;
+  }
+  .clearfix:after {
+    clear:both;
+  }
+  .clearfix {
+    *zoom:1;
+  }
+
+  body{
+    background-color: #f3f5f7;
+  }
+
+  .w {
+  /*版心样式*/
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li{
+    list-style: none;
+  }
+
+  /* 头部 */
+  .header {
+    height: 42px;
+    margin: 30px auto;
+  }
+
+
+  .logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+  }
+
+  .nav {
+    float: left;
+    margin-left: 60px;
+  }
+
+  .nav ul li{
+    float: left;
+    margin: 0 15px;
+  }
+
+  .nav ul li a{
+    /* 转换为块级 */
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+  }
+
+  .nav ul li a:hover {
+    /* 下边框设置下划线 */
+    border-bottom: 2px solid #00a4ff;
+    color:#00a4ff;
+  }
+
+  .search {
+    float: left;
+    width: 421px;
+    height: 42px;
+    margin-left: 70px;
+  }
+
+  .search input {
+    float: left;
+    width: 345px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    /* input框右侧边框隐藏，因为要和按钮合并 */
+    border-right: 0;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left:15px;
+  }
+
+  .search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    border:0;
+    background: url(./images/fa-search.png);
+  }
+
+  .user{
+    float: right;
+    line-height: 42px;
+    margin-right: 30px;
+    font-style: 14px;
+    color:#666;
+  }
+
+  .user img {
+    /* 图片文字垂直居中对齐 */
+    vertical-align: middle;
+  }
+
+  /* banner */
+  .banner {
+    height: 421px;
+    background-color: #1c036c;
+  }
+
+  .banner .w {
+    height: 421px;
+    /* 背景图垂直向上居中 */
+    background:url(./images/banner.png) no-repeat top center;
+  }
+
+  .subnav {
+    float: left;
+    width: 190px;
+    height: 421px;
+    background: rgba(0,0,0,.3);
+  }
+
+  .subnav ul li {
+    padding:0 20px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  .subnav ul li a {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .subnav ul li a span {
+    float: right;
+  }
+
+  .subnav ul li a:hover {
+    color:#00b4ff;
+  }
+
+  .course {
+    float: right;
+    width: 230px;
+    height: 310px;
+    /* 浮动盒子外边距不会合并 */
+    margin-top: 50px;
+    background:#fff;
+  }
+
+  .course h2 {
+    height: 48px;
+    line-height: 48px;
+    font-size:  18px;
+    background-color: #9bceea;
+    color:#fff;
+    text-align: center;
+  }
+
+  .course .bd {
+    padding:0 20px;
+  }
+  .course .bd ul li {
+    padding:15px 0;
+    border-bottom: 1px solid #a5a5a5;
+  }
+
+  .course .bd ul li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+  }
+
+  .course .bd ul li p {
+    font-size: 12px;
+    color: #a5a5a5;
+  }
+
+  .course .bd .more {
+    margin-top: 5px;
+    display:block;
+    height: 38px;
+    border:1px solid #00a4ff;
+    text-align: center;
+    line-height: 38px;
+    color:#00a4ff;
+    font-size:16px;
+    font-weight:700;
+  }
+  
+  .goods {
+    height: 60px;
+    background-color: #fff;
+    margin-top: 10px;
+    /* 设置盒子阴影 */
+    box-shadow: 0 2px 3px 3px  rgba(0,0,0,.1);
+    /* 父盒子设置行高子元素会继承 */
+    line-height: 60px;
+  }
+
+  .goods h3 {
+    float:left;
+    padding:0 34px;
+    color:#00a4ff;
+    font-weight: 700;
+  }
+
+  .goods ul {
+    float:left;
+  }
+  .goods ul li {
+     float: left;
+  }
+  .goods ul li a {
+    color: #050505;
+    font-size: 16px;
+    /* 内边距放在a标签内让a标签撑大li盒子 */
+    padding:0 32px;
+    border-left:1px solid #ccc;
+  }
+
+  .goods ul li a:hover {
+    color:#00a4ff;
+  }
+
+  .goods .mod {
+    float:right;
+    color: #00a4ff;
+    margin-right: 30px;
+    font-size:14px;
+    font-weight: 700;
+  }
+
+  .box {
+    margin-top: 30px;
+  }
+
+  .box .box-hd {
+     height: 45px;
+  }
+
+  .box-hd h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+  }
+
+  .box-hd a {
+    float: right;
+    font-size:12px;
+    color: #a5a5a5;
+    margin-top: 10px;
+    margin-right: 30px;
+  }
+  .box-bd ul li {
+    float: left;
+    width: 229px;
+    height: 270px;
+    margin-right: 12.5px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    /* 设置盒子阴影 */
+    box-shadow: 0 2px 3px 3px  rgba(0,0,0,.1);
+    position: relative;
+  }
+
+  .box-bd ul li:nth-child(5n) {
+    /* 伪类选择器nth-child筛选第5n个li元素让其margin-right为0避免溢出 */
+    margin-right:0;
+  }
+
+  .box-bd ul li > img {
+    /* 只让亲儿子宽度百分百 */
+    width: 100%;   
+  } 
+ 
+  .box-bd ul li h4 {
+    margin: 20px 20px 20px 25px;
+    font-size: 14px;
+    color:#050505;
+    font-weight: 400;
+  }
+
+  .box-bd ul li .status{
+    position: absolute;
+    top:4px;
+    right:-4px;
+  }
+
+  .box-bd  .info {
+    margin: 0 20px 0 25px;
+    font-size: 12px;
+    color:#999;
+  }
+
+  .box-bd .info span {
+     color: #ff7c2d;
+  }
+
+  .footer {
+    background-color: #fff;
+    height: 415px;
+  }
+
+  .footer .w {
+    /* 注意footer盒子没有浮动布局且没有设置高度会外边距塌陷,所以这里用内边距设置和上方盒子间隔 */
+    padding-top: 35px;
+  }
+
+  .copyright {
+     float:left;
+  }
+
+  .copyright p {
+    font-size: 12px;
+    color:#666;
+    margin: 20px 0 15px 0;
+  }
+
+  .copyright .app{
+    /* 注意a标签是行内要转换为块级 */
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 33px;
+    color:#00a4ff;
+  }
+
+  .links {
+    float: right;
+  }
+  .links dl {
+    float:left;
+    margin-left: 100px;
+  }
+  .links dl dt a{
+    font-size: 16px;
+    color:#333;
+  }
+
+  .links dl dd a {
+    font-size: 12px;
+    color:#333;
+  }
